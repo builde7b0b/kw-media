@@ -1,0 +1,50 @@
+.comedian-image {
+    max-width: 400px;
+    align-self: flex-start;
+  }
+  
+  .hero-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .hero-image {
+    max-width: 600px;
+  }
+  
+  .hero-text {
+    margin-left: 20px;
+  }
+  
+  .cta-button {
+    margin-top: 10px;
+  }
+
+  outube-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .youtube-video {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 aspect ratio (height divided by width) */
+  }
+  
+  .youtube-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .youtube-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 110px;
+  }
+  
+  
