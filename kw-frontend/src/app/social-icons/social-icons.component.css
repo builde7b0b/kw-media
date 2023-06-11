@@ -1,0 +1,10 @@
+.custom-icon {
+    width: 40px; /* Adjust the width as needed */
+    height: auto;
+    transition: transform 0.3s;
+    padding: 3px;
+  }
+  
+  .custom-icon:hover {
+    transform: scale(1.2); /* Adjust the scale factor for the hover effect */
+  }

@@ -1,0 +1,41 @@
+.container {
+    width: 50%; /* Adjust the width as desired */
+    margin: 0 auto; /* Center the div horizontally */
+    padding: 20px; /* Add padding as desired */
+    background-color: white;
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      width: 100%; /* Full width on smaller screens */
+    }
+  }
+
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .example-stepper {
+    background-color: black;
+  }
+  
+  ::ng-deep .mat-horizontal-stepper-header-container {
+    background-color: white;
+  }
+  
+  ::ng-deep .mat-horizontal-stepper-header {
+    background-color: grey;
+  }
+  
+  ::ng-deep .mat-step-header.mat-horizontal.mat-step-header-selected {
+    background-color: transparent;
+  }
+  
+  ::ng-deep .mat-step-header .mat-step-icon-selected,
+  ::ng-deep .mat-step-header .mat-step-icon-state-done {
+    background-color: #fbb10a;
+    color: #fff;
+  }
+  
+  

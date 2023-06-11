@@ -1,1 +1,54 @@
-<p>contact works!</p>
+<div class="container">
+<ng-container [ngSwitch]="stepperOrientation | async">
+    <div *ngSwitchCase="'horizontal'">GET IN TOUCH</div>
+    <div *ngSwitchCase="'vertical'">CONTACT</div>
+  </ng-container>
+  
+  <mat-stepper color="warn" 
+    class="example-stepper"
+    [orientation]="(stepperOrientation | async)!">
+    <mat-step [stepControl]="firstFormGroup" label="Name">
+      <form [formGroup]="firstFormGroup">
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" label="Message">
+      <form [formGroup]="secondFormGroup">
+        <mat-form-field>
+          <mat-label>Message</mat-label>
+          <input matInput formControlName="secondCtrl" placeholder="Hello I am ..."
+                 required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="thirdFormGroup" label="Email">
+      <form [formGroup]="thirdFormGroup">
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="thirdCtrl" placeholder="john@gmail.com" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+  </div>

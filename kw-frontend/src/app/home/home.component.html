@@ -1,52 +1,260 @@
 <mat-grid-list cols="4" rowHeight="100px">
+  <div class="background-video">
+    <video src="https://youtu.be/oTWnWFT7ce4" autoplay loop muted></video>
+  
+  
+  
     <mat-grid-tile [colspan]="tiles[0].cols" [rowspan]="tiles[0].rows" [style.background]="tiles[0].color">
       <!-- Content for Tile 1 -->
       
       <mat-toolbar>
         <mat-toolbar-row>
-          <a routerLink="/">Home</a>
-          <a routerLink="/about">About</a>
-          <a routerLink="/videos">Videos</a>
-          <a routerLink="/podcasts">Podcasts</a>
-          <a routerLink="/contact">Contact</a>
+          <button mat-button [matMenuTriggerFor]="menu">E-Books</button>
+<mat-menu #menu="matMenu">
+  <a target="_blank" href="https://books.apple.com/us/book/id6443175186"><button mat-menu-item>Apple Books</button></a>
+  <a target="_blank" href="https://play.google.com/store/books/details?id=dQp8EAAAQBAJ&PAffiliateID=1011ld4r&PCamRefID=%7BTRACKING_CODE%7D"><button mat-menu-item>Google Play Store</button></a>
+</mat-menu>
+<button mat-button [matMenuTriggerFor]="menu">AudioBooks</button>
+<mat-menu #menu2="matMenu">
+  <button mat-menu-item>Audible</button>
+  <button mat-menu-item>Google Play Store</button>
+</mat-menu>
         </mat-toolbar-row>
       </mat-toolbar>
     </mat-grid-tile>
+    
     <mat-grid-tile [colspan]="tiles[1].cols" [rowspan]="tiles[1].rows" [style.background]="tiles[1].color">
       <!-- Content for Tile 2 -->
-      <img src="../../assets/suite.jpeg" alt="Comedian Image" class="comedian-image">
+    
+      <div class="t2">
+        
+        <div class="comedian-image">
+          <img src="../../assets/suite.jpeg" alt="Comedian Image" class="comedian-image">
+        </div>
+        <div class="icons">
+          <app-social-icons></app-social-icons>
+
+        </div>
+
+      </div>
+     
+        
+    
+    
+
     </mat-grid-tile>
     <mat-grid-tile [colspan]="tiles[2].cols" [rowspan]="tiles[2].rows" [style.background]="tiles[2].color">
       <!-- Content for Tile 3 -->
-      <img src="../../assets/kwlogo.png" height="140px" width="210px" alt="Hero Image" class="hero-image">
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="tiles[3].cols" [rowspan]="tiles[3].rows" [style.background]="tiles[3].color">
-      <!-- Content for Tile 4 -->
-<div class="youtube-image">
-    <img src="https://cdn.pixabay.com/photo/2015/03/10/17/23/youtube-667451_1280.png" height="100px" width="110px" alt="Hero Image" class="hero-image">
-</div>
-<br>
-    
-
-      
-      <div class="hero-section">
-        <div class="youtube-grid">
-            <div class="youtube-video">
-              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/1Upbm8jqK3Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-            <div class="youtube-video">
-              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/oTWnWFT7ce4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-            <!-- Add more youtube-video divs with different video URLs as needed -->
+      <div class="logo-img">
+        <img src="../../assets/kwlogo-removebg-preview.png" alt="Hero Image" class="hero-image">
+        <div class="book-container">
+          <img src="http://kountrywayne.com/wp-content/uploads/2022/08/HelpIsOnTheWay-Cover-1347x2048.jpg" alt="Book Image" class="book-image">
+          <h2 class="book-header">Help Is On The Way</h2>
+          <div class="button-container">
+            <a target="_blank" href="https://www.amazon.com/gp/product/0593236475?tag=randohouseinc32824-20">
+              <button mat-raised-button color="primary">Buy on Amazon</button>
+            </a>
+            <a target="_blank" href="https://www.barnesandnoble.com/w/help-is-on-the-way-kountry-wayne/1141813914?ean=9780593581742">
+              <button mat-raised-button color="warn">Barnes & Noble(Signed)</button>
+            </a>
+            <!-- Add more buttons for other places to buy as needed -->
+            <a target="_blank" href="https://www.hudsonbooksellers.com/book/9780593236475?utm_source=prh&utm_medium=affiliate&utm_term=301&utm_content=PRHDE97D8B5A0B0--9780593236475&utm_campaign=9780593236475">
+              <button mat-raised-button color="primary">Hudson</button>
+            </a>
+            <a target="_blank" href="https://www.booksamillion.com/p/9780593236475?AID=10747236&PID=8373827&SID=PRHDE97D8B5A0B0--9780593236475&cjevent=55820d9b351e11ed82c7cab00a1c0e11&cjdata=MXxOfDB8WXww">
+              <button mat-raised-button color="accent">Book a Million</button>
+            </a>
           </div>
-        
-          
-        
-        <div class="hero-text">
-          <h2>"Jesus Is Poppin!"</h2>
-          <a routerLink="/videos" class="cta-button mat-raised-button mat-primary">Watch My Latest Comedy Video</a>
         </div>
       </div>
+      
+      
+      
+      
     </mat-grid-tile>
+    
+        
+        <div class="side-col-1">
+          <mat-grid-tile  [colspan]="tiles[3].cols" [rowspan]="tiles[3].rows" [style.background]="tiles[3].color">
+            <div class="content">
+              
+              <mat-tab-group color="warn" class="tab-group">
+                <mat-tab class="tab-1" label="Youtube"> 
+                    <div class="youtube-image">
+                        <img src="https://cdn.pixabay.com/photo/2015/03/10/17/23/youtube-667451_1280.png"  alt="Hero Image" class="yt-image">
+                    </div>
+
+                    <div class="hero-text">
+                      <h2 class="h2">"Jesus Is Poppin!"</h2>
+                      <a target="_blank" href="https://www.youtube.com/c/KountryWayne1814/featured" class="cta-button mat-raised-button mat-primary"><button mat-raised-button color="warn">Watch my Latest Video</button></a>
+                    </div>
+                    <br>
+                        
+                    
+                          
+                          <div class="hero-section">
+                            <div class="youtube-grid">
+                                <div class="youtube-video">
+                                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/1Upbm8jqK3Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                <div class="youtube-video">
+                                  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/oTWnWFT7ce4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                                </div>
+                                <!-- Add more youtube-video divs with different video URLs as needed -->
+                              
+
+                                <div class="video-container">
+                                  <mat-card class="video-card" *ngFor="let video of videos">
+                                    <img mat-card-image [src]="video.imageUrl" alt="Video Card">
+                                    <mat-card-content>
+                                      <h3>{{ video.title }}</h3>
+                                      <p>{{ video.description }}</p>
+                                      <a target="_blank" href={{video.videoUrl}}><button mat-raised-button>Watch on Youtube</button></a>
+                                    </mat-card-content>
+                                  </mat-card>
+                                </div>
+                                
+                                
+                                
+                              </div>
+                              
+                            
+                              
+                            
+                            
+                          </div>
+                     </mat-tab>
+                <mat-tab color="warn" class="tab-1" label="Shows"> 
+
+<div class="tab-1">
+                  <!-- Cards with media area -->
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title class="mat-title">Funny Bone</mat-card-title>
+      <mat-card-subtitle>July 7th 2023</mat-card-subtitle>
+      <mat-card-subtitle>Syracuse, NY</mat-card-subtitle>
+      <a target="_blank" href="https://syracuse.funnybone.com/ShowDetails/778e013d-c4e0-4efd-8d0c-8c5a73473dae/da055538-5b19-4a53-bf1c-07ed2ee120d7/Kountry_Wayne/Syracuse_Funny_Bone"><img mat-card-sm-image src="http://kountrywayne.com/wp-content/uploads/2022/12/Tour-Image-3-1024x1024.jpeg" ></a>
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    <a target="_blank" href="https://syracuse.funnybone.com/ShowDetails/778e013d-c4e0-4efd-8d0c-8c5a73473dae/da055538-5b19-4a53-bf1c-07ed2ee120d7/Kountry_Wayne/Syracuse_Funny_Bone">
+      <button mat-raised-button color="warn">Get Tickets</button></a>
+   
+  </mat-card-content>
+</mat-card>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title class="mat-title">Improv</mat-card-title>
+      <mat-card-subtitle>July 8th 2023</mat-card-subtitle>
+      <mat-card-subtitle>Albany, NY</mat-card-subtitle>
+      <a target="_blank" href="https://albany.funnybone.com/ShowDetails/b98283a9-36b9-41df-a8f3-b0cb78c97fad/fe90f238-dd0b-4177-a490-91bacbb9d65d/Kountry__Wayne/Albany_Funny_Bone"><img class="card-image" mat-card-sm-image src="http://kountrywayne.com/wp-content/uploads/2022/12/Tour-Image-3-1024x1024.jpeg" ></a>
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    <a target="_blank" href="https://albany.funnybone.com/ShowDetails/b98283a9-36b9-41df-a8f3-b0cb78c97fad/fe90f238-dd0b-4177-a490-91bacbb9d65d/Kountry__Wayne/Albany_Funny_Bone">
+      <button mat-raised-button color="warn">Get Tickets</button></a>
+   
+  </mat-card-content>
+</mat-card>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title class="mat-title">Stand Up Live</mat-card-title>
+      <mat-card-subtitle>August 03-05 2023</mat-card-subtitle>
+      <mat-card-subtitle>Huntsville, AL</mat-card-subtitle>
+      <a target="_blank" href="https://huntsville.standuplive.com/events/75235"><img class="card-image" mat-card-sm-image src="http://kountrywayne.com/wp-content/uploads/2022/12/Tour-Image-3-1024x1024.jpeg" ></a>
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    <a target="_blank" href="https://huntsville.standuplive.com/events/75235">
+      <button mat-raised-button color="warn">Get Tickets</button></a>
+  </mat-card-content>
+</mat-card>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title class="mat-title">The Comedy Zone</mat-card-title>
+      <mat-card-subtitle>August 10-13th 2023</mat-card-subtitle>
+      <mat-card-subtitle>Greenville, SC</mat-card-subtitle>
+      <a target="_blank" href="https://greenvillecomedyzone.com/events/71874"><img class="card-image" mat-card-sm-image src="http://kountrywayne.com/wp-content/uploads/2022/12/Tour-Image-3-1024x1024.jpeg" ></a>
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    <a target="_blank" href="https://greenvillecomedyzone.com/events/71874">
+      <button mat-raised-button color="warn">Get Tickets</button></a>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title class="mat-title">Improv Comedy Club</mat-card-title>
+      <mat-card-subtitle>September 22-24 2023</mat-card-subtitle>
+      <mat-card-subtitle>Orlando, FL</mat-card-subtitle>
+      <a target="_blank" href="https://theimprovorlando.com/ShowDetails/a724c21e-b962-4fcb-a018-2087a57b30da/866e4def-e0ba-4722-b140-f1b2b8ab8940/Kountry_Wayne/Orlando_Improv"><img class="card-image" mat-card-sm-image src="http://kountrywayne.com/wp-content/uploads/2022/12/Tour-Image-3-1024x1024.jpeg" ></a>
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    <a target="_blank" href="https://theimprovorlando.com/ShowDetails/a724c21e-b962-4fcb-a018-2087a57b30da/866e4def-e0ba-4722-b140-f1b2b8ab8940/Kountry_Wayne/Orlando_Improv">
+      <button mat-raised-button color="warn">Get Tickets</button></a>
+  </mat-card-content>
+</mat-card>
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title class="mat-title">Hartfort Funny Bone</mat-card-title>
+      <mat-card-subtitle>September 29-30 2023</mat-card-subtitle>
+      <mat-card-subtitle>Manchester, CT</mat-card-subtitle>
+      <a target="_blank" href="https://hartford.funnybone.com/ShowDetails/a724c21e-b962-4fcb-a018-2087a57b30da/9be6fb46-472d-4929-971e-35f56f6f1657/Kountry_Wayne/Hartford_Funny_Bone"><img class="card-image" mat-card-sm-image src="http://kountrywayne.com/wp-content/uploads/2022/12/Tour-Image-3-1024x1024.jpeg" ></a>
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    <a target="_blank" href="https://hartford.funnybone.com/ShowDetails/a724c21e-b962-4fcb-a018-2087a57b30da/9be6fb46-472d-4929-971e-35f56f6f1657/Kountry_Wayne/Hartford_Funny_Bone">
+      <button mat-raised-button color="warn">Get Tickets</button></a>
+  </mat-card-content>
+</mat-card>
+</div>
+ </mat-tab>
+
+                
+                
+                  <mat-tab label="Merch">
+                    <div class="merch-container">
+                      <mat-card class="merch-card" *ngFor="let product of merchProducts">
+                        <img mat-card-image [src]="product.imageUrl" alt="Merch Product">
+                        <mat-card-content>
+                          <h3>{{ product.name }}</h3>
+                          <p>{{ product.description }}</p>
+                        </mat-card-content>
+                        <mat-card-actions>
+                          <button mat-button color="warn">Buy Now</button>
+                        </mat-card-actions>
+                      </mat-card>
+                    </div>
+                  </mat-tab>
+                  
+                   
+              </mat-tab-group>
+            </div>
+           
+          </mat-grid-tile>
+          <!-- Content for Tile 4 -->
+    
+        </div>
+
+        
+        <div>
+
+        </div>
+      
+    
+    </div>
   </mat-grid-list>
+  <app-contact></app-contact>
+
+  <app-footer></app-footer>
+
+
   
