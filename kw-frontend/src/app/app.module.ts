@@ -30,6 +30,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { YoutubeVidsComponent } from './youtube-vids/youtube-vids.component';
 import { SocialIconsComponent } from './social-icons/social-icons.component';
 import { FooterComponent } from './footer/footer.component';
+import { PaymentFormComponent } from './payment-form/payment-form.component';
+import {MatSelectModule} from '@angular/material/select';
 
 
 
@@ -42,7 +44,8 @@ import { FooterComponent } from './footer/footer.component';
     ContactComponent,
     YoutubeVidsComponent,
     SocialIconsComponent,
-    FooterComponent
+    FooterComponent,
+    PaymentFormComponent
   ],
   imports: [
     BrowserModule,
@@ -63,6 +66,7 @@ import { FooterComponent } from './footer/footer.component';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatMenuModule,
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
