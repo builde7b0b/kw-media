@@ -1,4 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+    height: 100%;
+    background-color: #f8f8f8; /* Set the default background color */
+    color: #333; /* Set the default text color */
+  }
+  
+  body.dark-mode {
+    background-color: #333; /* Set the background color for dark mode */
+    color: #f8f8f8; /* Set the text color for dark mode */
+  }
+  
+  /* Add dark mode styles for specific elements */
+  .background-video {
+    /* Dark mode styles for the background video */
+  }
+  
+  /* Add more dark mode styles for other elements as needed */
+  
+  /* Add dark mode media queries for responsive styles */
+  @media (max-width: 600px) {
+    body.dark-mode {
+      /* Dark mode styles for mobile devices */
+    }
+  
+    /* Add more dark mode styles for mobile devices as needed */
+  }
+  

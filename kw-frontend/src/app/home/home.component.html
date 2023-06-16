@@ -9,15 +9,15 @@
       
       <mat-toolbar>
         <mat-toolbar-row>
-          <button mat-button [matMenuTriggerFor]="menu">E-Books</button>
+          <button mat-button [matMenuTriggerFor]="menu" matTooltip="Explore E-Books">E-Books</button>
 <mat-menu #menu="matMenu">
   <a target="_blank" href="https://books.apple.com/us/book/id6443175186"><button mat-menu-item>Apple Books</button></a>
   <a target="_blank" href="https://play.google.com/store/books/details?id=dQp8EAAAQBAJ&PAffiliateID=1011ld4r&PCamRefID=%7BTRACKING_CODE%7D"><button mat-menu-item>Google Play Store</button></a>
 </mat-menu>
-<button mat-button [matMenuTriggerFor]="menu">AudioBooks</button>
+<button  mat-button [matMenuTriggerFor]="menu2" matTooltip="Explore AudioBooks">AudioBooks</button>
 <mat-menu #menu2="matMenu">
-  <button mat-menu-item>Audible</button>
-  <button mat-menu-item>Google Play Store</button>
+  <a target="_blank" href="https://www.amazon.com/gp/product/B0B9QWTND6?tag=PRHDE97D8B5A0B0"><button mat-menu-item>Audible</button></a>
+  <a target="_blank" href="https://play.google.com/store/audiobooks/details?id=AQAAAECCXBwcjM&PAffiliateID=1011ld4r&PCamRefID=%7BTRACKING_CODE%7D"><button mat-menu-item>Google Play Store</button></a>
 </mat-menu>
         </mat-toolbar-row>
       </mat-toolbar>
@@ -28,10 +28,10 @@
     
       <div class="t2">
         
-        <div class="comedian-image">
+        <div class="comedian-image" matTooltip="Comedian Image">
           <img src="../../assets/suite.jpeg" alt="Comedian Image" class="comedian-image">
         </div>
-        <div class="icons">
+        <div class="icons" matTooltip="Social Icons">
           <app-social-icons></app-social-icons>
 
         </div>
@@ -52,17 +52,17 @@
           <h2 class="book-header">Help Is On The Way</h2>
           <div class="button-container">
             <a target="_blank" href="https://www.amazon.com/gp/product/0593236475?tag=randohouseinc32824-20">
-              <button mat-raised-button color="primary">Buy on Amazon</button>
+              <button mat-raised-button color="primary" matTooltip="Go To Amazon to Purchase">Buy on Amazon</button>
             </a>
             <a target="_blank" href="https://www.barnesandnoble.com/w/help-is-on-the-way-kountry-wayne/1141813914?ean=9780593581742">
-              <button mat-raised-button color="warn">Barnes & Noble(Signed)</button>
+              <button mat-raised-button color="warn" matTooltip="Go To Barnes and Nobles to Purchase">Barnes & Noble(Signed)</button>
             </a>
             <!-- Add more buttons for other places to buy as needed -->
             <a target="_blank" href="https://www.hudsonbooksellers.com/book/9780593236475?utm_source=prh&utm_medium=affiliate&utm_term=301&utm_content=PRHDE97D8B5A0B0--9780593236475&utm_campaign=9780593236475">
-              <button mat-raised-button color="primary">Hudson</button>
+              <button mat-raised-button color="primary" matTooltip="Go To Hudson Website">Hudson</button>
             </a>
             <a target="_blank" href="https://www.booksamillion.com/p/9780593236475?AID=10747236&PID=8373827&SID=PRHDE97D8B5A0B0--9780593236475&cjevent=55820d9b351e11ed82c7cab00a1c0e11&cjdata=MXxOfDB8WXww">
-              <button mat-raised-button color="accent">Book a Million</button>
+              <button mat-raised-button color="accent" matTooltip="Go To Book a Million">Book a Million</button>
             </a>
           </div>
         </div>
@@ -79,14 +79,14 @@
             <div class="content">
               
               <mat-tab-group color="warn" class="tab-group">
-                <mat-tab class="tab-1" label="Youtube"> 
+                <mat-tab class="tab-1" label="Youtube" matTooltip="Watch Youtube Videos"> 
                     <div class="youtube-image">
                         <img src="https://cdn.pixabay.com/photo/2015/03/10/17/23/youtube-667451_1280.png"  alt="Hero Image" class="yt-image">
                     </div>
 
                     <div class="hero-text">
                       <h2 class="h2">"Jesus Is Poppin!"</h2>
-                      <a target="_blank" href="https://www.youtube.com/c/KountryWayne1814/featured" class="cta-button mat-raised-button mat-primary"><button mat-raised-button color="warn">Watch my Latest Video</button></a>
+                      <a target="_blank" href="https://www.youtube.com/c/KountryWayne1814/featured" class="cta-button mat-raised-button mat-primary"><button mat-raised-button color="warn" matTooltip="The latest YT Video">Watch my Latest Video</button></a>
                     </div>
                     <br>
                         
@@ -124,7 +124,7 @@
                             
                           </div>
                      </mat-tab>
-                <mat-tab color="warn" class="tab-1" label="Shows"> 
+                <mat-tab color="warn" class="tab-1" label="Shows" matTooltip="Attend a Show in Your City!"> 
 
 <div class="tab-1">
                   <!-- Cards with media area -->
@@ -220,7 +220,7 @@
 
                 
                 
-                  <mat-tab label="Merch">
+                  <mat-tab label="Merch" matTooltip="Purchase Merchandise and Express Support!">
                     <div class="merch-container">
                       <mat-card class="merch-card" *ngFor="let product of merchProducts">
                         <img mat-card-image [src]="product.imageUrl" alt="Merch Product">
@@ -229,7 +229,7 @@
                           <p>{{ product.description }}</p>
                         </mat-card-content>
                         <mat-card-actions>
-                          <button mat-button color="warn">Buy Now</button>
+                          <button mat-button color="warn" matTooltip="Purchase this Item">Buy Now</button>
                         </mat-card-actions>
                       </mat-card>
                     </div>
