@@ -1,0 +1,29 @@
+
+
+# Documentation 
+https://stripe.com/docs/api/checkout/sessions
+https://stripe.com/docs/checkout/quickstart?lang=node&client=react
+
+Publishable key pk_test_51LXunxDehgflY7M5CwBLdS3Gx93qehw73hHxtJFpSBxp7T4KwewVgl7cOHsZ9BiyhMitAYl6fMvjmdaOvuNABea3005XjBvgId
+
+Secret key: pk_test_51LXunxDehgflY7M5CwBLdS3Gx93qehw73hHxtJFpSBxp7T4KwewVgl7cOHsZ9BiyhMitAYl6fMvjmdaOvuNABea3005XjBvgId
+
+
+
+
+## do I need to run a server to test my stripe integration?
+
+
+To test your Stripe integration, you don't necessarily need to run a server. Stripe provides test mode and test data that allow you to simulate transactions and test your integration without processing actual payments. Here's how you can test your Stripe integration without running a server:
+
+Set Up a Stripe Test Account: If you haven't done so already, create a Stripe test account at https://dashboard.stripe.com/register. Test accounts have separate API keys and test data that won't affect your live Stripe account.
+
+Obtain Test API Keys: In the Stripe Dashboard, navigate to the "Developers" section and find your test API keys. You'll need the "Publishable Key" for client-side integration and the "Secret Key" for server-side integration (if applicable).
+
+Enable Test Mode in Your Integration: In your Angular app's code, use the test API keys instead of the live ones. This ensures that your integration operates in test mode and doesn't process real payments. For example:
+
+Use Test Card Details: Stripe provides test card numbers, such as 4242 4242 4242 4242, that you can use for testing. You can also use other test card details like expiry dates and CVV codes provided by Stripe. These test card details allow you to simulate different scenarios, such as successful payments, declined payments, or error handling.
+
+Test Different Scenarios: With the test card details, you can simulate various payment scenarios in your Angular app. Test different payment amounts, card inputs, and payment flows to ensure your integration works as expected. Observe the responses from Stripe and handle them appropriately in your code.
+
+

@@ -32,6 +32,7 @@ import { SocialIconsComponent } from './social-icons/social-icons.component';
 import { FooterComponent } from './footer/footer.component';
 import { PaymentFormComponent } from './payment-form/payment-form.component';
 import {MatSelectModule} from '@angular/material/select';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 
@@ -67,6 +68,7 @@ import {MatSelectModule} from '@angular/material/select';
     MatFormFieldModule,
     MatMenuModule,
     MatSelectModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
