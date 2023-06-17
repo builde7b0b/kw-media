@@ -1,6 +1,6 @@
 
 .background-video{
-  
+
 
 }
 
@@ -19,11 +19,12 @@
   margin-bottom: 20px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .logo-img {
     flex-direction: column-reverse;
     margin-top: 0;
     justify-content: center;
+    width:50%;
   }
   
   .book-container {
@@ -133,6 +134,7 @@
 .book-header {
   font-size: 18px;
   margin-bottom: 10px;
+  color: white;
 }
 
 .button-container {
@@ -266,6 +268,8 @@ mat-card-content {
   object-fit: contain;
 }
 
+
+
 h3 {
   font-size: 18px;
   font-weight: bold;
@@ -278,3 +282,24 @@ p {
   margin: 0;
   color: white;
 }
+@media (max-width: 660px) {
+  .tile-one {
+    grid-row: span 2 !important;
+    grid-column: span 1 !important;
+  }
+
+  .tile-two,
+  .tile-three,
+  .tile-four {
+    grid-row: span 0 !important;
+    grid-column: span 0  !important;
+  }
+
+  .book-button{
+    max-width: 50%;
+    justify-self: center;
+  
+  }
+}
+
+  

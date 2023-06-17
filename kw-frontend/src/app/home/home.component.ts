@@ -72,10 +72,10 @@ export class HomeComponent {
   constructor(private _formBuilder: FormBuilder) {}
 
   tiles: Tile[] = [
-    {text: 'One', cols: 3, rows: 1, color: 'red'},
-    {text: 'Two', cols: 1, rows: 7, color: 'white'},
-    {text: 'Three', cols: 1, rows: 8, color: 'white'},
-    {text: 'Four', cols: 2, rows: 10, color: 'white'},
+    {text: 'One', cols: 4, rows: 1, color: 'white'},
+    {text: 'Two', cols: 0, rows: 0, color: 'white'},
+    {text: 'Three', cols: 4, rows: 8, color: 'black'},
+    {text: 'Four', cols: 4, rows: 10, color: 'white'},
   ];
 
   videos = [

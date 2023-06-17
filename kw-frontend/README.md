@@ -1,5 +1,21 @@
 # KwFrontend
 
+## Description 
+
+## Links
+
+[Mobile Version:](https://648d8f8db952097447052c83--jolly-banoffee-b1f51d.netlify.app/)
+[Desktop:]()
+
+
+
+
+
+
+
+
+
+# ANGULAR Information
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.4.
 
 ## Development server

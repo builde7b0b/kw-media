@@ -4,7 +4,7 @@
   
   
   
-    <mat-grid-tile [colspan]="tiles[0].cols" [rowspan]="tiles[0].rows" [style.background]="tiles[0].color">
+    <mat-grid-tile [colspan]="tiles[0].cols" [rowspan]="tiles[0].rows" [style.background]="tiles[0].color" class="tile-one">
       <!-- Content for Tile 1 -->
       
       <mat-toolbar>
@@ -23,27 +23,8 @@
       </mat-toolbar>
     </mat-grid-tile>
     
-    <mat-grid-tile [colspan]="tiles[1].cols" [rowspan]="tiles[1].rows" [style.background]="tiles[1].color">
-      <!-- Content for Tile 2 -->
     
-      <div class="t2">
-        
-        <div class="comedian-image" matTooltip="Comedian Image">
-          <img src="../../assets/suite.jpeg" alt="Comedian Image" class="comedian-image">
-        </div>
-        <div class="icons" matTooltip="Social Icons">
-          <app-social-icons></app-social-icons>
-
-        </div>
-
-      </div>
-     
-        
-    
-    
-
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="tiles[2].cols" [rowspan]="tiles[2].rows" [style.background]="tiles[2].color">
+    <mat-grid-tile [colspan]="tiles[2].cols" [rowspan]="tiles[2].rows" [style.background]="tiles[2].color" class="tile-three">
       <!-- Content for Tile 3 -->
       <div class="logo-img">
         <img src="../../assets/kwlogo-removebg-preview.png" alt="Hero Image" class="hero-image">
@@ -52,17 +33,17 @@
           <h2 class="book-header">Help Is On The Way</h2>
           <div class="button-container">
             <a target="_blank" href="https://www.amazon.com/gp/product/0593236475?tag=randohouseinc32824-20">
-              <button mat-raised-button color="primary" matTooltip="Go To Amazon to Purchase">Buy on Amazon</button>
+              <button class="book-button" mat-raised-button color="warn" matTooltip="Go To Amazon to Purchase">Buy on Amazon</button>
             </a>
             <a target="_blank" href="https://www.barnesandnoble.com/w/help-is-on-the-way-kountry-wayne/1141813914?ean=9780593581742">
               <button mat-raised-button color="warn" matTooltip="Go To Barnes and Nobles to Purchase">Barnes & Noble(Signed)</button>
             </a>
             <!-- Add more buttons for other places to buy as needed -->
             <a target="_blank" href="https://www.hudsonbooksellers.com/book/9780593236475?utm_source=prh&utm_medium=affiliate&utm_term=301&utm_content=PRHDE97D8B5A0B0--9780593236475&utm_campaign=9780593236475">
-              <button mat-raised-button color="primary" matTooltip="Go To Hudson Website">Hudson</button>
+              <button mat-raised-button color="warn" matTooltip="Go To Hudson Website">Hudson</button>
             </a>
             <a target="_blank" href="https://www.booksamillion.com/p/9780593236475?AID=10747236&PID=8373827&SID=PRHDE97D8B5A0B0--9780593236475&cjevent=55820d9b351e11ed82c7cab00a1c0e11&cjdata=MXxOfDB8WXww">
-              <button mat-raised-button color="accent" matTooltip="Go To Book a Million">Book a Million</button>
+              <button mat-raised-button color="warn" matTooltip="Go To Book a Million">Book a Million</button>
             </a>
           </div>
         </div>
@@ -75,7 +56,7 @@
     
         
         <div class="side-col-1">
-          <mat-grid-tile  [colspan]="tiles[3].cols" [rowspan]="tiles[3].rows" [style.background]="tiles[3].color">
+          <mat-grid-tile  [colspan]="tiles[3].cols" [rowspan]="tiles[3].rows" [style.background]="tiles[3].color" class="tile-four">
             <div class="content">
               
               <mat-tab-group color="warn" class="tab-group">
