@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import {FormBuilder, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {loadStripe} from '@stripe/stripe-js';
 
 
-const stripePromise = loadStripe('pk_test_51LXunxDehgflY7M5CwBLdS3Gx93qehw73hHxtJFpSBxp7T4KwewVgl7cOHsZ9BiyhMitAYl6fMvjmdaOvuNABea3005XjBvgId');
+
 
 export interface Tile {
   color: string;

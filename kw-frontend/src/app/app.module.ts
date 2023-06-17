@@ -30,7 +30,6 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { YoutubeVidsComponent } from './youtube-vids/youtube-vids.component';
 import { SocialIconsComponent } from './social-icons/social-icons.component';
 import { FooterComponent } from './footer/footer.component';
-import { PaymentFormComponent } from './payment-form/payment-form.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTooltipModule} from '@angular/material/tooltip';
 
@@ -46,7 +45,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     YoutubeVidsComponent,
     SocialIconsComponent,
     FooterComponent,
-    PaymentFormComponent
+    
   ],
   imports: [
     BrowserModule,
