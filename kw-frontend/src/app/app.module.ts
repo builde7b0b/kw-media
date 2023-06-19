@@ -32,6 +32,9 @@ import { SocialIconsComponent } from './social-icons/social-icons.component';
 import { FooterComponent } from './footer/footer.component';
 import {MatSelectModule} from '@angular/material/select';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { CharactersComponent } from './characters/characters.component';
+import { StorylinesComponent } from './storylines/storylines.component';
+import { MenuBarComponent } from './menu-bar/menu-bar.component';
 
 
 
@@ -45,6 +48,9 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     YoutubeVidsComponent,
     SocialIconsComponent,
     FooterComponent,
+    CharactersComponent,
+    StorylinesComponent,
+    MenuBarComponent,
     
   ],
   imports: [

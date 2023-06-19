@@ -7,20 +7,7 @@
     <mat-grid-tile [colspan]="tiles[0].cols" [rowspan]="tiles[0].rows" [style.background]="tiles[0].color">
       <!-- Content for Tile 1 -->
       
-      <mat-toolbar>
-        <mat-toolbar-row>
-          <button mat-button [matMenuTriggerFor]="menu" matTooltip="Explore E-Books">E-Books</button>
-<mat-menu #menu="matMenu">
-  <a target="_blank" href="https://books.apple.com/us/book/id6443175186"><button mat-menu-item>Apple Books</button></a>
-  <a target="_blank" href="https://play.google.com/store/books/details?id=dQp8EAAAQBAJ&PAffiliateID=1011ld4r&PCamRefID=%7BTRACKING_CODE%7D"><button mat-menu-item>Google Play Store</button></a>
-</mat-menu>
-<button  mat-button [matMenuTriggerFor]="menu2" matTooltip="Explore AudioBooks">AudioBooks</button>
-<mat-menu #menu2="matMenu">
-  <a target="_blank" href="https://www.amazon.com/gp/product/B0B9QWTND6?tag=PRHDE97D8B5A0B0"><button mat-menu-item>Audible</button></a>
-  <a target="_blank" href="https://play.google.com/store/audiobooks/details?id=AQAAAECCXBwcjM&PAffiliateID=1011ld4r&PCamRefID=%7BTRACKING_CODE%7D"><button mat-menu-item>Google Play Store</button></a>
-</mat-menu>
-        </mat-toolbar-row>
-      </mat-toolbar>
+      <app-menu-bar></app-menu-bar>
     </mat-grid-tile>
     
     <mat-grid-tile [colspan]="tiles[1].cols" [rowspan]="tiles[1].rows" [style.background]="tiles[1].color">
@@ -81,6 +68,7 @@
               <mat-tab-group color="warn" class="tab-group">
                 <mat-tab class="tab-1" label="Youtube" matTooltip="Watch Youtube Videos"> 
                     <div class="youtube-image">
+                        <img src="https://cdn.pixabay.com/photo/2015/03/10/17/23/youtube-667451_1280.png"  alt="Hero Image" class="yt-image">
                         <img src="https://cdn.pixabay.com/photo/2015/03/10/17/23/youtube-667451_1280.png"  alt="Hero Image" class="yt-image">
                     </div>
 
@@ -229,7 +217,7 @@
                           <p>{{ product.description }}</p>
                         </mat-card-content>
                         <mat-card-actions>
-                          <button mat-button color="warn" matTooltip="Purchase this Item">Buy Now</button>
+                          <button mat-button color="warn" matTooltip="Purchase this Item" (click)="openBottomSheet()">Buy Now</button>
                         </mat-card-actions>
                       </mat-card>
                     </div>

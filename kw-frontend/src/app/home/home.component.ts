@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 import {FormBuilder, Validators, FormsModule, ReactiveFormsModule} from '@angular/forms';
-
+import {
+  MatBottomSheet,
+  MatBottomSheetModule,
+  MatBottomSheetRef,
+} from '@angular/material/bottom-sheet';
+import { MatListModule } from '@angular/material/list';
 
 
 
@@ -57,6 +62,13 @@ export interface Tile {
 })
 export class HomeComponent {
 
+// Inside your component
+
+// toggleDarkMode() {
+//   const body = document.querySelector('body');
+//   body.classList.toggle('dark-mode');
+// }
+
 
   
 
@@ -68,12 +80,12 @@ export class HomeComponent {
   });
   isLinear = false;
 
-  constructor(private _formBuilder: FormBuilder) {}
+  constructor(private _formBuilder: FormBuilder, private bottomSheet: MatBottomSheet) {}
 
   tiles: Tile[] = [
     {text: 'One', cols: 3, rows: 1, color: 'red'},
-    {text: 'Two', cols: 1, rows: 7, color: 'white'},
-    {text: 'Three', cols: 1, rows: 8, color: 'white'},
+    {text: 'Two', cols: 1, rows: 11, color: 'white'},
+    {text: 'Three', cols: 1, rows: 9, color: 'white'},
     {text: 'Four', cols: 2, rows: 10, color: 'white'},
   ];
 
@@ -177,4 +189,32 @@ export class HomeComponent {
     },
   ];
 
+  openBottomSheet(): void {
+  this.bottomSheet.open(BottomSheetComponent);
+}
+
+}
+
+
+@Component({
+  selector: 'app-bottom-sheet',
+  template: `
+    <h3>Product Details:</h3>
+    
+    <h4>Available Sizes:</h4>
+    <ul>
+      <li *ngFor="let size of sizes">{{ size }}</li>
+    </ul>
+    
+    <button mat-button (click)="close()">Close</button>
+  `,
+})
+export class BottomSheetComponent {
+
+  sizes: string[] = ['Small', 'Medium', 'Large'];
+  constructor(private bottomSheetRef: MatBottomSheetRef<BottomSheetComponent>) {}
+
+  close(): void {
+    this.bottomSheetRef.dismiss();
+  }
 }

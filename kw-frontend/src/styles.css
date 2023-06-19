@@ -7,7 +7,7 @@ html, body {
   }
   
   body.dark-mode {
-    background-color: #333; /* Set the background color for dark mode */
+    background-color: #000000; /* Set the background color for dark mode */
     color: #f8f8f8; /* Set the text color for dark mode */
   }
   
