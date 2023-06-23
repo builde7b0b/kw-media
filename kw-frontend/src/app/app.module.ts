@@ -16,6 +16,7 @@ import {
 } from '@angular/material/bottom-sheet';
 import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
+import {NgFor} from '@angular/common';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -35,6 +36,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import { CharactersComponent } from './characters/characters.component';
 import { StorylinesComponent } from './storylines/storylines.component';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 
@@ -73,7 +75,9 @@ import { MenuBarComponent } from './menu-bar/menu-bar.component';
     MatFormFieldModule,
     MatMenuModule,
     MatSelectModule,
-    MatTooltipModule
+    MatTooltipModule,
+    NgFor,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,75 @@
-<p>characters works!</p>
+<app-menu-bar></app-menu-bar>
+<div class="group">
+    <mat-tab-group color="primary">
+        <mat-tab color="primary" *ngFor="let tab of lotsOfTabs" [label]="tab.name">
+            <mat-grid-list cols="2" rowHeight="2:1">
+                <mat-grid-tile>
+                    <img class="charImg" src="{{ tab.imageSrc}}">
+                </mat-grid-tile>
+                <mat-grid-tile>
+                  <div class="panel">
+                  <mat-accordion>
+                    <mat-expansion-panel class="panel" hideToggle>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Bio
+                        </mat-panel-title>
+                        <mat-panel-description>
+                          Click to Learn About the Character
+                        </mat-panel-description>
+                      </mat-expansion-panel-header>
+                      <p>{{ tab.name }} - Birthdate: {{ tab.birthdate }}</p>
+                      <p>{{ tab.bio}}</p>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel class="panel" (opened)="panelOpenState = true"
+                                         (closed)="panelOpenState = false">
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Storylines
+                        </mat-panel-title>
+                        <mat-panel-description>
+                          Currently  {{panelOpenState ? 'open' : 'closed'}} Click to
+                        </mat-panel-description>
+                      </mat-expansion-panel-header>
+                      <p>Follow The Story!</p>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+                  </div>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                  
+                  <div>
+                    <h2>{{tab.name}}</h2>
+                  </div>
+                  
+                  <a href="https://www.youtube.com/c/KountryWayne1814/featured" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1384/1384060.png" alt="YT Icon" class="custom-icon">
+                  </a>
+                  <a href="https://www.facebook.com/KingKountryWayne/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/128/733/733547.png" alt="Facebook Icon" class="custom-icon">
+                  </a>
+                  <a href="https://www.instagram.com/kountrywayne/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1409/1409946.png" alt="IG Icon" class="custom-icon">
+                  </a>
+
+                  <div class="image-grid">
+
+                   <img class="charImg2" src={{tab.image2}}>
+                   <img class="charImg2" src={{tab.image3}}>
+                   <img class="charImg2" src={{tab.image4}}>
+
+
+                  </div>
+
+                  
+                  
+                 
+                </mat-grid-tile>
+                <mat-grid-tile>4</mat-grid-tile>
+              </mat-grid-list>
+              
+        </mat-tab>
+      </mat-tab-group>
+</div>
+<div></div>
+<app-footer></app-footer>
