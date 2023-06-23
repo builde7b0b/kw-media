@@ -1,5 +1,6 @@
 <mat-toolbar>
     <mat-toolbar-row>
+      <button mat-button routerLink="/" matTooltip="Explore E-Books">Home</button>
       <button mat-button [matMenuTriggerFor]="menu" matTooltip="Explore E-Books">E-Books</button>
       <mat-menu #menu="matMenu">
         <a target="_blank" href="https://books.apple.com/us/book/id6443175186"><button mat-menu-item>Apple Books</button></a>
@@ -10,15 +11,9 @@
         <a target="_blank" href="https://www.amazon.com/gp/product/B0B9QWTND6?tag=PRHDE97D8B5A0B0"><button mat-menu-item>Audible</button></a>
         <a target="_blank" href="https://play.google.com/store/audiobooks/details?id=AQAAAECCXBwcjM&PAffiliateID=1011ld4r&PCamRefID=%7BTRACKING_CODE%7D"><button mat-menu-item>Google Play Store</button></a>
       </mat-menu>
-      <button disabled mat-button [matMenuTriggerFor]="menu2" matTooltip="Explore AudioBooks">Characters</button>
-      <mat-menu #menu2="matMenu">
-        <a target="_blank" href="https://www.amazon.com/gp/product/B0B9QWTND6?tag=PRHDE97D8B5A0B0"><button mat-menu-item>Audible</button></a>
-        <a target="_blank" href="https://play.google.com/store/audiobooks/details?id=AQAAAECCXBwcjM&PAffiliateID=1011ld4r&PCamRefID=%7BTRACKING_CODE%7D"><button mat-menu-item>Google Play Store</button></a>
-      </mat-menu>
-      <button disabled mat-button [matMenuTriggerFor]="menu2" matTooltip="Explore AudioBooks">Storylines</button>
-      <mat-menu #menu2="matMenu">
-        <a target="_blank" href="https://www.amazon.com/gp/product/B0B9QWTND6?tag=PRHDE97D8B5A0B0"><button mat-menu-item>Audible</button></a>
-        <a target="_blank" href="https://play.google.com/store/audiobooks/details?id=AQAAAECCXBwcjM&PAffiliateID=1011ld4r&PCamRefID=%7BTRACKING_CODE%7D"><button mat-menu-item>Google Play Store</button></a>
-      </mat-menu>
+      <button mat-button routerLink="/characters" matTooltip="Explore AudioBooks">Characters</button>
+      
+      <button mat-button routerLink="/storyline" matTooltip="Explore AudioBooks">Storylines</button>
+      
     </mat-toolbar-row>
   </mat-toolbar>

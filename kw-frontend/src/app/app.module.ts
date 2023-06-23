@@ -17,6 +17,7 @@ import {
 import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
 import {NgFor} from '@angular/common';
+import {MatTableModule} from '@angular/material/table';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -37,6 +38,7 @@ import { CharactersComponent } from './characters/characters.component';
 import { StorylinesComponent } from './storylines/storylines.component';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { VideoTableComponent } from './video-table/video-table.component';
 
 
 
@@ -53,6 +55,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     CharactersComponent,
     StorylinesComponent,
     MenuBarComponent,
+    VideoTableComponent,
     
   ],
   imports: [
@@ -78,6 +81,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatTooltipModule,
     NgFor,
     MatExpansionModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

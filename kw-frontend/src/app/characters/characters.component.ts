@@ -57,7 +57,7 @@ export class CharactersComponent {
       birthdate: 'December 9th, 1987',
       age: 34,
       bio: 'Kountry Wayne is a comedian and social media personality who was formerly a rapper. Wayne is known for his comedy content, which went viral on Facebook in 2014. He made funny, short videos about life’s inconvenient and unfortunate moments. Since 2015, Wayne has been performing stand-up comedy. As an actor, he has appeared in films such as “Brazilian Wavy” (2016), “The Turnaround” (2017), and “Holiday Heartbreak” (2020). On Instagram, he has gained 3.3 million followers, while on his YouTube channel, Wayne has garnered around 636,000 subscribers.',
-      imageSrc: '../assets/Characters/kw.jpeg',
+      imageSrc: '../assets/Characters/Wayne/kw.jpeg',
       image2: '../assets/Original.jpeg',
       image3:'../assets/39-Kountry-Wayne.jpeg',
       image4:'../assets/unnamed.jpeg',
@@ -67,32 +67,47 @@ export class CharactersComponent {
       name: 'Blake Elizabeth Rogers',
       birthdate: 'September 14, 2001',
       age: 21,
-      imageSrc: '../assets/Characters/blake.jpeg'
+      imageSrc: '../assets/Characters/Blake/blake.jpeg',
+      image2: '../assets/Characters/Blake/blacka6.jpeg',
+      image3:'../assets/Characters/Blake/blacke.jpeg',
+      image4:'../assets/Characters/Blake/blacksparkes.jpeg',
     },
     {
       name: 'Anthony Dalton II',
       birthdate: 'July 1, 1980',
       age: 42,
-      imageSrc: '../assets/Characters/lovecoach.jpeg'
+      imageSrc: '../assets/Characters/Ant/ant.jpg',
+      image2: '../assets/Characters/Ant/ant6.jpeg',
+      image3:'../assets/Characters/Ant/AnthonyD.jpeg',
+      image4:'../assets/Characters/Ant/ant.jpg',
     },
   
     {
       name: 'Rolonda Rochelle',
       birthdate: 'September 5, 1967',
       age: 56,
-      imageSrc: '../assets/Characters/ro.jpeg'
+      imageSrc: '../assets/Characters/Ro/ro.jpeg',
+      image2: '../assets/Characters/Ro/rolonda.jpeg',
+      image3:'../assets/Characters/Ro/Rolanda.png',
+      image4:'../assets/unnamed.jpeg',
     },
     {
       name: 'Michael Gould Jr, Mike Blesss',
       birthdate: 'February 23rd, 1979',
       age: 44,
-      imageSrc: '../assets/Characters/mike.jpeg'
+      imageSrc: '../assets/Characters/MichaelGould/mike.jpeg',
+      image2: '../assets/Characters/MichaelGould/mikef.jpeg',
+      image3:'../assets/Characters/MichaelGould/mikeamber.jpeg',
+      image4:'../assets/unnamed.jpeg',
     },
     {
       name: 'Jordan Jackson, Jordan',
       birthdate: 'June 20, 1974',
       age: 47,
-      imageSrc: '../assets/Characters/jordan.jpeg'
+      imageSrc: '../assets/Characters/JordanJackson/jordan.jpeg',
+      image2: '../assets/Characters/JordanJackson/jordan.jpeg',
+      image3:'../assets/Characters/JordanJackson/jordan.jpeg',
+      image4:'../assets/Characters/JordanJackson/jordan.jpeg',
     },
     {
       name: 'LisaRaye McCoy',
